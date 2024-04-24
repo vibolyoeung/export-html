@@ -3,11 +3,6 @@ async function errorHandler(ctx, next) {
     await next();
   } catch (err) {
     let { status = 500, message, details } = err;
-
-    if (err.isJoi) {
-      message = details.map((d) => d.message).join("\n");
-    }
-
     ctx.status = status;
     ctx.body = {
       error: { message, status, details },

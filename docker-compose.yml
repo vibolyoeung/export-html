@@ -1,12 +1,11 @@
-version: "3.7"
-
 services:
   export-html:
     container_name: export-html
+    platform: linux/amd64
+    volumes:
+      - ./src:/service/src
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        NODE_ENV: development
     ports:
       - "2305:2305"

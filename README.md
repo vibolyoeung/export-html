@@ -120,8 +120,6 @@ spec:
           emptyDir: {}
 ```
 
-An optional `SENTRY_DSN` environment variable can be configured to enable [Sentry.io](https://sentry.io/) error tracking.
-
 ## Credits
 
-This service is based on the excellent [Puppeteer module](https://github.com/GoogleChrome/puppeteer) and is maintained by Kaare Larsen.
+This service is based on the excellent [Puppeteer module](https://github.com/GoogleChrome/puppeteer)
